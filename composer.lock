@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8756c9f848df71fe3dd53fc27a9515ce",
+    "packages": [
+        {
+            "name": "crimsonking/fragments",
+            "version": "v0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/o-alquimista/fragments.git",
+                "reference": "67632b6b46e19d5f8eb34a65f2d3fd9a397c36e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/o-alquimista/fragments/zipball/67632b6b46e19d5f8eb34a65f2d3fd9a397c36e6",
+                "reference": "67632b6b46e19d5f8eb34a65f2d3fd9a397c36e6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fragments\\Bundle\\": "src/Fragments/Bundle",
+                    "Fragments\\Component\\": "src/Fragments/Component"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Douglas Silva",
+                    "email": "doug.hs@protonmail.ch"
+                }
+            ],
+            "description": "A small PHP framework for web applications",
+            "time": "2020-04-15T02:36:36+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "crimsonking/fragments-skeleton",
+    "description": "This package contains what you need to start developing a Fragments application",
+    "require": {
+      "crimsonking/fragments": "^0.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

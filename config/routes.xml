@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<routing>
+  <!--
+  <route>
+    <id>main_page</id>
+    <path>/</path>
+    <controller>App\Controller\MainController</controller>
+    <methods>GET|POST</methods>
+    <action>loadPage</action>
+  </route>
+  -->
+</routing>
