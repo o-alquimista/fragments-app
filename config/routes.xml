@@ -2,10 +2,10 @@
 <!DOCTYPE xml>
 <routing>
   <route>
-    <id>main_page</id>
+    <id>login</id>
     <path>/</path>
-    <controller>App\Controller\MainController</controller>
-    <methods>GET</methods>
-    <action>mainPage</action>
+    <controller>App\Controller\SecurityController</controller>
+    <methods>GET|POST</methods>
+    <action>authenticate</action>
   </route>
 </routing>
