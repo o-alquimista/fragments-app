@@ -3,9 +3,23 @@
 <routing>
   <route>
     <id>login</id>
-    <path>/</path>
+    <path>/login</path>
     <controller>App\Controller\SecurityController</controller>
     <methods>GET|POST</methods>
-    <action>authenticate</action>
+    <action>login</action>
+  </route>
+  <route>
+    <id>logout</id>
+    <path>/logout</path>
+    <controller>App\Controller\SecurityController</controller>
+    <methods>GET</methods>
+    <action>logout</action>
+  </route>
+  <route>
+    <id>main_page</id>
+    <path>/</path>
+    <controller>App\Controller\MainController</controller>
+    <methods>GET</methods>
+    <action>mainPage</action>
   </route>
 </routing>
