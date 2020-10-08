@@ -11,8 +11,8 @@
             
             <?php foreach ($this->getFeedback() as $type => $messages): ?>
                 <?php foreach ($messages as $message): ?>
-                    <div class="alert alert-<?php echo $type; ?>" role="alert">
-                      <?php echo $message; ?>
+                    <div class="alert alert-<?= $type ?>" role="alert">
+                      <?= $message ?>
                     </div>
                 <?php endforeach; ?>
             <?php endforeach; ?>

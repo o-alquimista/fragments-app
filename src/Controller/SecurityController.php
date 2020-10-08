@@ -5,12 +5,12 @@ namespace App\Controller;
 use Fragments\Bundle\Controller\AbstractController;
 use Fragments\Component\Request;
 use App\Repository\UserRepository;
-use Fragments\Component\SessionManagement\Session;
 
 class SecurityController extends AbstractController
 {
     public function login()
     {
+        session_start();
         $request = new Request();
 
         if ($this->isFormSubmitted()) {
@@ -28,13 +28,12 @@ class SecurityController extends AbstractController
             }
             
             if ($validUser && password_verify($_POST['password'], $user->getPassword())) {
-                $session = new Session();
-                $session->regenerate();
+                session_regenerate_id();
 
-                $session->set('user', [
+                $_SESSION['user'] = [
                     'id' => $user->getId(),
                     'username' => $user->getUsername()
-                ]);
+                ];
                 
                 $request->redirectToRoute('main_page');
             }
@@ -48,10 +47,9 @@ class SecurityController extends AbstractController
     
     public function logout()
     {
-        $session = new Session();
         $request = new Request();
 
-        $session->destroyAll();
+        $_SESSION = [];
         $request->redirectToRoute('login');
     }
 }
