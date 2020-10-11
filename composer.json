@@ -2,7 +2,7 @@
 	"name" : "crimsonking/fragments-app",
 	"description" : "A simple web app built with Fragments",
 	"require" : {
-		"crimsonking/fragments" : "dev-master",
+		"crimsonking/fragments" : "^0.8",
 		"twbs/bootstrap" : "4.5.2"
 	},
 	"autoload" : {
@@ -23,10 +23,5 @@
 			"cp vendor/twbs/bootstrap/dist/js/bootstrap.min.js public/js/bootstrap/",
 			"cp vendor/twbs/bootstrap/dist/js/bootstrap.min.js.map public/js/bootstrap/"
 		]
-	},
-	"repositories" : [{
-			"type" : "path",
-			"url" : "../fragments"
-		}
-	]
+	}
 }

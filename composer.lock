@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6c058dbe5a0432669f67e68ed13cdfb",
+    "content-hash": "9a2673e6565f70bdfdabd615d837b866",
     "packages": [
         {
             "name": "crimsonking/fragments",
-            "version": "dev-master",
+            "version": "v0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/o-alquimista/fragments.git",
+                "reference": "ef480525fd2654007b7c237bbf742b06431573ed"
+            },
             "dist": {
-                "type": "path",
-                "url": "../fragments",
-                "reference": "87f9a637fe051e27a46d8391e47e5048cfd3d508"
+                "type": "zip",
+                "url": "https://api.github.com/repos/o-alquimista/fragments/zipball/ef480525fd2654007b7c237bbf742b06431573ed",
+                "reference": "ef480525fd2654007b7c237bbf742b06431573ed",
+                "shasum": ""
             },
             "type": "library",
             "autoload": {
@@ -21,6 +27,7 @@
                     "Fragments\\Component\\": "src/Fragments/Component"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "AGPL-3.0-or-later"
             ],
@@ -30,7 +37,8 @@
                     "email": "doug.hs@protonmail.ch"
                 }
             ],
-            "description": "A small PHP framework for web applications"
+            "description": "A small PHP framework for web applications",
+            "time": "2020-10-11T02:30:59+00:00"
         },
         {
             "name": "twbs/bootstrap",
@@ -93,9 +101,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "crimsonking/fragments": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

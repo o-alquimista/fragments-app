@@ -3,31 +3,33 @@
 namespace App\Controller;
 
 use Fragments\Bundle\Controller\AbstractController;
-use Fragments\Component\Request;
 use App\Repository\UserRepository;
+use Fragments\Component\Http\Response;
+use Fragments\Component\Http\Request;
 
 class SecurityController extends AbstractController
 {
-    public function login()
+    public function login(): Response
     {
         session_start();
+
         $request = new Request();
 
-        if ($this->isFormSubmitted()) {
-            if (!$this->isCsrfTokenValid('login', $_POST['_csrf_token'])) {
-                $request->redirectToRoute('login');
+        if ($request->server['REQUEST_METHOD'] === 'POST') {
+            if (!$this->isCsrfTokenValid('login', $request->post['_csrf_token'])) {
+                return $this->redirectToRoute('login');
             }
             
             $repository = new UserRepository();
             $validUser = true;
             
             try {
-                $user = $repository->getUserByUsername($_POST['username']);
+                $user = $repository->getUserByUsername($request->post['username']);
             } catch (\Exception $e) {
                 $validUser = false;
             }
             
-            if ($validUser && password_verify($_POST['password'], $user->getPassword())) {
+            if ($validUser && password_verify($request->post['password'], $user->getPassword())) {
                 session_regenerate_id();
 
                 $_SESSION['user'] = [
@@ -35,21 +37,22 @@ class SecurityController extends AbstractController
                     'username' => $user->getUsername()
                 ];
                 
-                $request->redirectToRoute('main_page');
+                return $this->redirectToRoute('main_page');
             }
             
             // User not found or incorrect password
             $this->addFeedback('warning', 'Invalid credentials.');
         }
 
-        $this->renderTemplate(__DIR__ . '/../../templates/user/login.php');
+        return $this->render('user/login.php');
     }
     
-    public function logout()
+    public function logout(): Response
     {
-        $request = new Request();
+        session_start();
 
         $_SESSION = [];
-        $request->redirectToRoute('login');
+
+        return $this->redirectToRoute('main_page');
     }
 }

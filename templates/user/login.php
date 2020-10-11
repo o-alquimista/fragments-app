@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <?php include __DIR__ . '/../base/_meta.html'; ?>
-        <?php include __DIR__ . '/../base/_style.html'; ?>
+        <?php include __DIR__ . '/../base/_meta.html' ?>
+        <?php include __DIR__ . '/../base/_style.html' ?>
         <title>Login - Fragments App</title>
     </head>
     <body>
         <div class="container">
             <h1>Login</h1>
             
-            <?php foreach ($this->getFeedback() as $type => $messages): ?>
-                <?php foreach ($messages as $message): ?>
-                    <div class="alert alert-<?= $type ?>" role="alert">
-                      <?= $message ?>
-                    </div>
-                <?php endforeach; ?>
-            <?php endforeach; ?>
+            <?php include __DIR__ . '/../base/_feedback.php' ?>
             
             <form method="post">
-            	<?php $request = $this->getRequest() ?>
-
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" value="<?= $request->post('username') ? $this->escape($request->post('username')) : '' ?>">
+                    <input type="text" name="username" class="form-control" id="username" value="<?= isset($app_request->post['username']) ? $this->escape($app_request->post['username']) : '' ?>">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -35,6 +27,6 @@
             </form>
         </div>
         
-        <?php include __DIR__ . '/../base/_script.html'; ?>
+        <?php include __DIR__ . '/../base/_script.html' ?>
     </body>
 </html>
