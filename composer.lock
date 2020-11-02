@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a2673e6565f70bdfdabd615d837b866",
+    "content-hash": "ec15a518ca38dd7c157c682975bc5501",
     "packages": [
         {
             "name": "crimsonking/fragments",
-            "version": "v0.8",
+            "version": "v0.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o-alquimista/fragments.git",
-                "reference": "ef480525fd2654007b7c237bbf742b06431573ed"
+                "reference": "1c520f23a58c4217190e70094a307f8fdbc4b633"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o-alquimista/fragments/zipball/ef480525fd2654007b7c237bbf742b06431573ed",
-                "reference": "ef480525fd2654007b7c237bbf742b06431573ed",
+                "url": "https://api.github.com/repos/o-alquimista/fragments/zipball/1c520f23a58c4217190e70094a307f8fdbc4b633",
+                "reference": "1c520f23a58c4217190e70094a307f8fdbc4b633",
                 "shasum": ""
             },
             "type": "library",
@@ -38,7 +38,11 @@
                 }
             ],
             "description": "A small PHP framework for web applications",
-            "time": "2020-10-11T02:30:59+00:00"
+            "support": {
+                "issues": "https://github.com/o-alquimista/fragments/issues",
+                "source": "https://github.com/o-alquimista/fragments/tree/v0.8.1"
+            },
+            "time": "2020-11-02T16:44:01+00:00"
         },
         {
             "name": "twbs/bootstrap",
@@ -89,6 +93,10 @@
                 "sass",
                 "web"
             ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v4-dev"
+            },
             "funding": [
                 {
                     "url": "https://opencollective.com/bootstrap",
@@ -106,5 +114,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

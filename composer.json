@@ -2,7 +2,7 @@
 	"name" : "crimsonking/fragments-app",
 	"description" : "A simple web app built with Fragments",
 	"require" : {
-		"crimsonking/fragments" : "^0.8",
+		"crimsonking/fragments" : "0.8.1",
 		"twbs/bootstrap" : "4.5.2"
 	},
 	"autoload" : {
