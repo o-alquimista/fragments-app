@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use Fragments\Component\PdoConnection;
+use Fragments\Component\Storage\PdoConnection;
 use App\Entity\User;
 
 class UserRepository
@@ -16,13 +16,9 @@ class UserRepository
     
     public function getUserByUsername(string $username): User
     {
-        $params = [];
-
-        $query = "SELECT * FROM user WHERE username = :username";
-        $params[':username'] = $username;
-        
-        $stmt = $this->pdo->prepare($query);
-        $stmt->execute($params);
+        $stmt = $this->pdo->prepare("SELECT * FROM user WHERE username = :username");
+        $stmt->bindValue(':username', $username, \PDO::PARAM_STR);
+        $stmt->execute();
         $row = $stmt->fetch();
         
         if (!$row) {

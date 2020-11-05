@@ -9,8 +9,8 @@
         <div class="container">
             <?php include __DIR__ . '/../base/_feedback.php' ?>
 
-        	<?php if ($app_user): ?>
-                <h1>Welcome, <?= $this->escape($app_user['username']) ?></h1>
+        	<?php if ($app_session->exists('user')): ?>
+                <h1>Welcome, <?= $this->escape($app_session->get('user')['username']) ?></h1>
                 <a href="<?= $app_router->generateUrl('logout') ?>" class="btn btn-danger">Logout</a>
             <?php else: ?>
                 <h1>Who are you?</h1>

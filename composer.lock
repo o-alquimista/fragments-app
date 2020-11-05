@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec15a518ca38dd7c157c682975bc5501",
+    "content-hash": "d6c058dbe5a0432669f67e68ed13cdfb",
     "packages": [
         {
             "name": "crimsonking/fragments",
-            "version": "v0.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/o-alquimista/fragments.git",
-                "reference": "1c520f23a58c4217190e70094a307f8fdbc4b633"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/o-alquimista/fragments/zipball/1c520f23a58c4217190e70094a307f8fdbc4b633",
-                "reference": "1c520f23a58c4217190e70094a307f8fdbc4b633",
-                "shasum": ""
+                "type": "path",
+                "url": "../fragments",
+                "reference": "1c520f23a58c4217190e70094a307f8fdbc4b633"
             },
             "type": "library",
             "autoload": {
@@ -27,7 +21,6 @@
                     "Fragments\\Component\\": "src/Fragments/Component"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "AGPL-3.0-or-later"
             ],
@@ -38,11 +31,9 @@
                 }
             ],
             "description": "A small PHP framework for web applications",
-            "support": {
-                "issues": "https://github.com/o-alquimista/fragments/issues",
-                "source": "https://github.com/o-alquimista/fragments/tree/v0.8.1"
-            },
-            "time": "2020-11-02T16:44:01+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "twbs/bootstrap",
@@ -109,7 +100,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "crimsonking/fragments": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

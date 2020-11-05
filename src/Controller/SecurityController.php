@@ -18,7 +18,7 @@ class SecurityController extends AbstractController
         $request = new Request();
 
         if ($request->server['REQUEST_METHOD'] === 'POST') {
-            if (!$this->isCsrfTokenValid('login', $request->post['_csrf_token'])) {
+            if (false === $this->isCsrfTokenValid('login', $request->post['_csrf_token'])) {
                 return $this->redirectToRoute('login');
             }
             
