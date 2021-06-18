@@ -1,0 +1,50 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e35d5f77e8a63ff41bbd655444802bcf",
+    "packages": [
+        {
+            "name": "crimsonking/fragments",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../fragments",
+                "reference": "7d47e86cfae026b8cf2eec55318d98925d58d75c"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fragments\\Bundle\\": "src/Fragments/Bundle",
+                    "Fragments\\Component\\": "src/Fragments/Component"
+                }
+            },
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Douglas Silva",
+                    "email": "doug.hs@protonmail.ch"
+                }
+            ],
+            "description": "A small PHP framework for web applications",
+            "transport-options": {
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "crimsonking/fragments": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
