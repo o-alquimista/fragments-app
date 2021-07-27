@@ -6,7 +6,7 @@
     <?= $this->include('main/_script.html') ?>
     
     <?= $this->include('main/_title.php', [
-        'title' => 'New article'
+        'title' => 'Edit article'
     ]) ?>
   </head>
   <body>
@@ -16,21 +16,21 @@
 
     <main id="main" class="container mt-3">
       <header>
-        <h1>New article</h1>
+        <h1>Edit article</h1>
       </header>
 
       <?= $this->include('main/feedback.php') ?>
 
       <?= $this->include('main/form/article.php', [
-        'title' => isset($_POST['title']) ? $this->escape($_POST['title']) : '',
-        'body' => isset($_POST['body']) ? $this->escape($_POST['body']) : '',
-        'date' => isset($_POST['date']) ? $this->escape($_POST['date']) : '',
-        'time' => isset($_POST['time']) ? $this->escape($_POST['time']) : '',
-        'submitLabel' => 'Create',
+        'title' => $this->escape($article->title),
+        'body' => $this->escape($article->body),
+        'date' => (\DateTime::createFromFormat('Y-m-d H:i:s', $article->date))->format('Y-m-d'),
+        'time' => (\DateTime::createFromFormat('Y-m-d H:i:s', $article->date))->format('H:i'),
+        'submitLabel' => 'Update',
         'csrfToken' => $csrf->get('article')
       ]) ?>
     </main>
-    
+
     <?= $this->include('main/_footer.php') ?>
   </body>
 </html>

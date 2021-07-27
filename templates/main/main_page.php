@@ -19,18 +19,21 @@
         <h1>Main page</h1>
       </header>
 
+      <?= $this->include('main/feedback.php') ?>
+
       <?php if (empty($articles)): ?>
       <section class="text-center p-4">
         <span class="lead text-secondary">Nothing here</span>
       </section>
       <?php else: ?>
-      <section>
+      <ul class="list-group">
         <?php foreach ($articles as $article): ?>
-        <article class="border p-3">
+        <li class="list-group-item">
           <?= $this->escape($article->title) ?>
-        </article>
+          <a href="<?= $app_router->generateUrl('article_update', ['id' => $article->id]) ?>">Edit</a>
+        </li>
         <?php endforeach ?>
-      </section>
+        </ul>
       <?php endif ?>
     </main>
     
